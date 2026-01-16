@@ -146,7 +146,7 @@ The API will be available at `http://localhost:8001`
 docker network create demo-network
 
 # Build and start the container
-docker-compose up --build
+docker compose up --build
 ```
 
 The API will be available at `http://localhost:8001`
@@ -333,16 +333,16 @@ docker run -p 8001:8001 --env-file .env fastapi_app_image
 ### Using Docker Compose
 ```bash
 # Start services
-docker-compose up -d
+docker compose up -d
 
 # View logs
-docker-compose logs -f
+docker compose logs -f
 
 # Stop services
-docker-compose down
+docker compose down
 
 # Rebuild and restart
-docker-compose up --build
+docker compose up --build
 ```
 
 ## 🔐 Security Notes
