@@ -241,48 +241,6 @@ Once the application is running, you can access:
 - `quantity`: Integer
 - `price_per_unit`: Decimal
 
-## 🎯 Usage Examples
-
-### 1. Create a User Account
-
-```bash
-curl -X POST "http://localhost:8001/signup" \
-  -H "Content-Type: application/json" \
-  -d '{"username": "testuser", "password": "testpass123"}'
-```
-
-### 2. Login and Get Token
-
-```bash
-curl -X POST "http://localhost:8001/login" \
-  -H "Content-Type: application/json" \
-  -d '{"username": "testuser", "password": "testpass123"}'
-```
-
-### 3. Populate Database with Custom Product Data
-
-```bash
-# First, generate the CSV data
-python generate_data.py
-
-# Then populate the database
-curl -X PUT "http://localhost:8001/database/custom" \
-  -H "Content-Type: application/json" \
-  -d '{}'
-```
-
-### 4. Get Top Products by Category
-
-```bash
-curl -X GET "http://localhost:8001/products/top-product"
-```
-
-### 5. Get Current User Info (with authentication)
-
-```bash
-curl -X GET "http://localhost:8001/users/me" \
-  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
-```
 
 ## 🔧 Development Workflow
 
